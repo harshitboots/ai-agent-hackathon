@@ -10,7 +10,7 @@
 -Submit predictions
 -Get evaluated automatically using metrics + AI judge
 
-🧠 Architecture Overview
+**🧠 Architecture Overview**
 Dataset → Exploration → Feature Engineering → Model Training → Predictions
                                                                ↓
                                                       AI Agent (Streamlit)
@@ -18,7 +18,7 @@ Dataset → Exploration → Feature Engineering → Model Training → Predictio
                                                       Evaluation System
                                                                ↓
                                                          Leaderboard
-🏗️ Project Structure
+**🏗️ Project Structure**
 
 ai-agent-hackathon/
 │
@@ -60,50 +60,41 @@ target_revenue → Regression
 What you will do:
 
 Clean data
-
 Encode categorical variables
-
 Create new features
-
 💡 Examples:
-
 activity_score
-
 engagement_ratio
-
 spend_per_transaction
 
 👉 This is the most important phase
 👉 Better features = better model
 
-🔹 PHASE 3 — Model Training
+**🔹 PHASE 3 — Model Training**
 
 📘 Notebook: 03_model_training.ipynb
 
 What you will do:
 
 Train ML models
-
 Compare performance
-
 Save best model
 
 🤖 Models you can use:
+
 Type	Models
 Basic	Logistic Regression
 Tree-based	Random Forest, Gradient Boosting
 Advanced	XGBoost
 Regression	Linear Regression
-🔹 PHASE 4 — Generate Predictions
+
+**🔹 PHASE 4 — Generate Predictions**
 
 📘 Notebook: 04_generate_predictions.ipynb
 
 What you will do:
-
 Load model
-
 Predict on test data
-
 Save output
 
 📤 FINAL OUTPUT FORMAT
@@ -123,11 +114,8 @@ streamlit run app.py
 What your agent does:
 
 Takes user input
-
 Uses your trained model
-
 Shows predictions
-
 Displays confidence
 
 🔹 PHASE 6 — Evaluation
@@ -144,54 +132,40 @@ Click:
 For Classification:
 
 Accuracy → 50%
-
 F1 Score → 30%
-
 AI Judge → 20%
-
 For Regression:
-
 MSE (lower better) → 60%
-
 R² Score → 20%
-
 AI Judge → 20%
 
-🤖 AI JUDGE (SPECIAL FEATURE)
+**🤖 AI JUDGE (SPECIAL FEATURE)**
 
 Your model is also evaluated by AI based on:
 
 Prediction quality
-
 Generalization
-
 Business usability
 
-🏆 LEADERBOARD
+**🏆 LEADERBOARD**
 
 Automatically updated
-
 Supports tie-breaking
-
 Fair ranking system
 
 ⚠️ RULES
 
 ✅ Use any model
-
 ✅ Create your own features
-
 ✅ Customize your AI agent
 
 ❌ Not Allowed:
 
 Changing output format
-
 Incorrect file naming
-
 Multiple submissions after deadline
 
-🧠 HOW TO USE CHATGPT (VERY IMPORTANT)
+**🧠 HOW TO USE CHATGPT (VERY IMPORTANT)**
 
 You are encouraged to use ChatGPT to improve your solution.
 
@@ -208,16 +182,13 @@ Evaluation:
 How to improve F1 score?
 💡 Pro Tips
 
-Focus on feature engineering first
+**Focus on feature engineering first**
 
 Try multiple models
-
 Check feature importance
-
 Keep model simple but effective
 
-🎯 FINAL CHECKLIST
-
+****🎯 FINAL CHECKLIST**
 Before submission:
 
 ✔ Model trained
@@ -226,7 +197,7 @@ Before submission:
 ✔ File name correct
 ✔ Columns correct
 
-🚀 FINAL GOAL
+**🚀 FINAL GOAL**
 
 Build an AI Agent that is:
 
@@ -235,9 +206,9 @@ Build an AI Agent that is:
 ✅ User-friendly
 ✅ Business-ready
 
-🔥 GOOD LUCK
+**🔥 GOOD LUCK
 
 “Your model is your brain,
 but your agent is your product.”
 
-🚀 Go build something amazing!
+🚀 Go build something amazing!**

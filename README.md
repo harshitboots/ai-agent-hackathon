@@ -1,173 +1,243 @@
-# ai-agent-hackathon
-# 🤖 AI Agent Hackathon
-
-
+🚀 AI Agent Hackathon Platform
+🎯 Objective
 
 Welcome to the AI Agent Hackathon!
+-In this challenge, you will:
+-Explore a real-world dataset
+-Build features based on your understanding
+-Train a machine learning model
+-Create your own AI Agent (Streamlit app)
+-Submit predictions
+-Get evaluated automatically using metrics + AI judge
 
-In this challenge, you will:
+🧠 Architecture Overview
+Dataset → Exploration → Feature Engineering → Model Training → Predictions
+                                                               ↓
+                                                      AI Agent (Streamlit)
+                                                               ↓
+                                                      Evaluation System
+                                                               ↓
+                                                         Leaderboard
+🏗️ Project Structure
 
-* Analyze data
-* Build a machine learning model
-* Create an AI-powered agent
-* Compete on leaderboard
+ai-agent-hackathon/
+│
+├── data/                    # Dataset (already provided)
+├── notebooks/              # Step-by-step notebooks
+├── models/                 # Saved model (model.pkl)
+├── outputs/                # Your submission goes here
+├── evaluations/            # Evaluation system
+├── app/                    # Streamlit UI (Agent + Leaderboard)
+├── README.md
 
----
+🧭 PHASE-WISE GUIDE
+🔹 PHASE 1 — Data Exploration
 
-## 📂 Project Structure
+📘 Notebook: 01_data_exploration.ipynb
 
-* `data/` → Dataset
-* `notebooks/` → Step-by-step notebooks
-* `models/` → Saved models
-* `app/` → AI Agent UI (Streamlit)
-* `submissions/` → Your final submission
-* `evaluation/` → Scoring system
-* `leaderboard/` → Results
+What you will do:
 
----
+Understand dataset structure
 
-## 🚀 Steps to Follow
+Identify patterns
 
-1. Open this repo in Codespaces
+Analyze relationships
 
-2. Run notebooks in order:
+Choose your target variable
 
-   * 01_generate_dataset
-   * 02_data_exploration
-   * 03_feature_engineering
-   * 04_model_training
-   * 05_generate_predictions
+🎯 Target Options:
 
-3. Build your AI Agent:
+target_churn → Classification
 
-   * Modify `app/app.py`
+target_fraud → Classification
 
-4. Generate submission:
+target_revenue → Regression
 
-   * predictions.csv
+🔹 PHASE 2 — Feature Engineering
 
-5. Submit your work:
+📘 Notebook: 02_feature_engineering.ipynb
 
-   * Place file in: submissions/<your_name>/predictions.csv
-   * Create Pull Request
+What you will do:
 
----
+Clean data
 
-## 🏆 Goal
+Encode categorical variables
 
-* Build the most accurate model
-* Create best AI agent
-* Top leaderboard score wins!
+Create new features
 
----
+💡 Examples:
 
-## 🚨 Rules
+activity_score
 
-* Do not change dataset
-* Follow submission format strictly
-* Only one submission per student
+engagement_ratio
 
----
+spend_per_transaction
 
-Good luck 🚀
+👉 This is the most important phase
+👉 Better features = better model
 
+🔹 PHASE 3 — Model Training
 
-# 🧑‍🎓 Student Instructions
+📘 Notebook: 03_model_training.ipynb
 
-## Step 1 — Open Environment
+What you will do:
 
-* Open GitHub repo
-* Launch Codespaces
+Train ML models
 
----
+Compare performance
 
-## Step 2 — Run Notebooks
+Save best model
 
-Follow order:
+🤖 Models you can use:
+Type	Models
+Basic	Logistic Regression
+Tree-based	Random Forest, Gradient Boosting
+Advanced	XGBoost
+Regression	Linear Regression
+🔹 PHASE 4 — Generate Predictions
 
-1. Data Exploration
-2. Feature Engineering
-3. Model Training
-4. Prediction
+📘 Notebook: 04_generate_predictions.ipynb
 
----
+What you will do:
 
-## Step 3 — Complete Tasks
+Load model
 
-Look for:
+Predict on test data
 
-🔴 STUDENT TASK
+Save output
 
-Fill missing code sections
+📤 FINAL OUTPUT FORMAT
+actual,prediction
+📁 Save your file as:
+outputs/YOURNAME_predictions.csv
 
----
+Example:
 
-## Step 4 — Build AI Agent
+outputs/harshit_predictions.csv
+🔹 PHASE 5 — Build AI Agent
 
-Modify:
-app/app.py
+📘 File: app/app.py
 
-✔ Add your name
-✔ Improve UI
-✔ Match features
+Run your agent:
+streamlit run app.py
+What your agent does:
 
----
+Takes user input
 
-## Step 5 — Generate Predictions
+Uses your trained model
 
-Output file:
-predictions.csv
+Shows predictions
 
----
+Displays confidence
 
-## Step 6 — Submit
+🔹 PHASE 6 — Evaluation
 
-Place file:
+📘 File: app/leaderboard.py
 
-submissions/<your_name>/predictions.csv
+Run leaderboard:
+streamlit run leaderboard.py
+Click:
 
-Then:
+👉 Run Evaluation
 
-* Commit
-* Push
-* Create Pull Request
+🏆 Scoring System
+For Classification:
 
----
+Accuracy → 50%
 
-## 🎯 Tips
+F1 Score → 30%
 
-* Better features = better score
-* Try different models
-* Make UI user-friendly
+AI Judge → 20%
 
----
+For Regression:
 
-Good luck!
+MSE (lower better) → 60%
 
+R² Score → 20%
 
-# 🏆 Judging Criteria
+AI Judge → 20%
 
-## 1. Model Performance (50%)
+🤖 AI JUDGE (SPECIAL FEATURE)
 
-* Accuracy / RMSE / F1 score
+Your model is also evaluated by AI based on:
 
-## 2. Feature Engineering (20%)
+Prediction quality
 
-* New features created
-* Data transformation quality
+Generalization
 
-## 3. AI Agent UI (20%)
+Business usability
 
-* Usability
-* Clarity
-* Interaction
+🏆 LEADERBOARD
 
-## 4. Creativity (10%)
+Automatically updated
 
-* Innovation
-* Extra features
-* Explanation logic
+Supports tie-breaking
 
----
+Fair ranking system
 
-Final score = Combined evaluation
+⚠️ RULES
+
+✅ Use any model
+
+✅ Create your own features
+
+✅ Customize your AI agent
+
+❌ Not Allowed:
+
+Changing output format
+
+Incorrect file naming
+
+Multiple submissions after deadline
+
+🧠 HOW TO USE CHATGPT (VERY IMPORTANT)
+
+You are encouraged to use ChatGPT to improve your solution.
+
+🔥 Example Prompts
+Feature Engineering:
+Suggest 5 advanced features for churn prediction dataset
+Model Selection:
+Which model is best for classification with tabular data?
+Hyperparameter Tuning:
+How to improve RandomForest performance?
+Debugging:
+Why is my model overfitting?
+Evaluation:
+How to improve F1 score?
+💡 Pro Tips
+
+Focus on feature engineering first
+
+Try multiple models
+
+Check feature importance
+
+Keep model simple but effective
+
+🎯 FINAL CHECKLIST
+
+Before submission:
+
+✔ Model trained
+✔ Predictions generated
+✔ File saved in outputs/
+✔ File name correct
+✔ Columns correct
+
+🚀 FINAL GOAL
+
+Build an AI Agent that is:
+
+✅ Accurate
+✅ Intelligent
+✅ User-friendly
+✅ Business-ready
+
+🔥 GOOD LUCK
+
+“Your model is your brain,
+but your agent is your product.”
+
+🚀 Go build something amazing!

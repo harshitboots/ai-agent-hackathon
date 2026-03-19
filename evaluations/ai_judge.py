@@ -90,10 +90,10 @@ def run_evaluation(student_name, file_path):
     # Step 5: Normalize AI score
     # -------------------------------
     ai_score = ai_result.get("score", 0)
-    ai_score_normalized = ai_score / 10  # convert 0–10 → 0–1
+    ai_score_normalized = ai_score / 10  # 0–10 → 0–1
 
     # -------------------------------
-    # Step 6: Final Score Calculation (FLEXIBLE)
+    # Step 6: Final Score Calculation (Flexible)
     # -------------------------------
     problem_type = metrics.get("problem_type", "classification")
 
@@ -106,7 +106,7 @@ def run_evaluation(student_name, file_path):
 
     else:  # regression
         final_score = (
-            (1 / (1 + metrics.get("mse", 1))) * 0.6 +   # lower error = better
+            (1 / (1 + metrics.get("mse", 1))) * 0.6 +
             metrics.get("r2_score", 0) * 0.2 +
             ai_score_normalized * 0.2
         )
@@ -116,7 +116,8 @@ def run_evaluation(student_name, file_path):
         "metrics": metrics,
         "ai_score": ai_score,
         "feedback": ai_result.get("feedback", ""),
-        "final_score": round(final_score, 4)
+        "final_score": round(final_score, 4),
+        "problem_type": problem_type
     }
 
     print(f"✅ Score for {student_name}: {result['final_score']}")
@@ -141,10 +142,13 @@ def update_leaderboard(result):
     if os.path.exists(path):
         leaderboard = pd.read_csv(path)
     else:
-        leaderboard = pd.DataFrame(columns=["student", "score"])
+        leaderboard = pd.DataFrame(columns=[
+            "student", "score", "accuracy", "f1_score",
+            "mse", "r2_score", "ai_score", "problem_type"
+        ])
 
     # -------------------------------
-    # Remove existing student entry
+    # Remove existing entry
     # -------------------------------
     leaderboard = leaderboard[leaderboard["student"] != result["student"]]
 
@@ -153,15 +157,30 @@ def update_leaderboard(result):
     # -------------------------------
     new_row = pd.DataFrame([{
         "student": result["student"],
-        "score": result["final_score"]
+        "score": result["final_score"],
+        "accuracy": result["metrics"].get("accuracy"),
+        "f1_score": result["metrics"].get("f1_score"),
+        "mse": result["metrics"].get("mse"),
+        "r2_score": result["metrics"].get("r2_score"),
+        "ai_score": result["ai_score"],
+        "problem_type": result["problem_type"]
     }])
 
     leaderboard = pd.concat([leaderboard, new_row], ignore_index=True)
 
     # -------------------------------
-    # Sort leaderboard
+    # Sorting with Tie-Break Logic
     # -------------------------------
-    leaderboard = leaderboard.sort_values(by="score", ascending=False)
+    if leaderboard["problem_type"].iloc[0] == "classification":
+        leaderboard = leaderboard.sort_values(
+            by=["score", "accuracy", "f1_score", "ai_score"],
+            ascending=[False, False, False, False]
+        )
+    else:
+        leaderboard = leaderboard.sort_values(
+            by=["score", "mse", "r2_score", "ai_score"],
+            ascending=[False, True, False, False]
+        )
 
     # -------------------------------
     # Save leaderboard
@@ -180,7 +199,6 @@ def run_all_evaluations(outputs_folder="outputs"):
         print("❌ Outputs folder not found")
         return
 
-    # Only valid submission files
     files = [f for f in os.listdir(outputs_folder) if f.endswith("_predictions.csv")]
 
     if not files:

@@ -1,7 +1,7 @@
-🚀 AI Agent Hackathon Platform
-🎯 Objective
+**🚀 AI Agent Hackathon Platform**
+**🎯 Objective**
 
-Welcome to the AI Agent Hackathon!
+**Welcome to the AI Agent Hackathon!**
 -In this challenge, you will:
 -Explore a real-world dataset
 -Build features based on your understanding
@@ -30,7 +30,7 @@ ai-agent-hackathon/
 ├── app/                    # Streamlit UI (Agent + Leaderboard)
 ├── README.md
 
-🧭 PHASE-WISE GUIDE
+**🧭 PHASE-WISE GUIDE**
 🔹 PHASE 1 — Data Exploration
 
 📘 Notebook: 01_data_exploration.ipynb
@@ -45,7 +45,7 @@ Analyze relationships
 
 Choose your target variable
 
-🎯 Target Options:
+**🎯 Target Options:**
 
 target_churn → Classification
 

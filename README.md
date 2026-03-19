@@ -31,29 +31,24 @@ ai-agent-hackathon/
 ├── README.md
 
 **🧭 PHASE-WISE GUIDE**
-🔹 PHASE 1 — Data Exploration
+🔹 **PHASE 1 — Data Exploration**
 
 📘 Notebook: 01_data_exploration.ipynb
 
 What you will do:
 
 Understand dataset structure
-
 Identify patterns
-
 Analyze relationships
-
 Choose your target variable
 
 **🎯 Target Options:**
 
 target_churn → Classification
-
 target_fraud → Classification
-
 target_revenue → Regression
-
-🔹 PHASE 2 — Feature Engineering
+**
+🔹 **PHASE 2 — Feature Engineering****
 
 📘 Notebook: 02_feature_engineering.ipynb
 

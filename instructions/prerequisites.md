@@ -1,9 +1,9 @@
 🚀 AI Agent Hackathon — Student Prerequisites Guide
 🎯 Objective
-Before starting the hackathon, you must:
+**Before starting the hackathon, you must:
 Set up your environment
 Understand basic concepts
-Be ready to build your AI agent smoothly
+Be ready to build your AI agent smoothly**
 ===================================================================
 💻 1. SYSTEM REQUIREMENTS
 Make sure you have:

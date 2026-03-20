@@ -13,6 +13,7 @@ Make sure you have:
 ✅ Laptop (8GB RAM recommended)
 ✅ Stable internet connection
 ✅ Browser (Chrome / Edge preferred)
+
 ====================================================================
 
 🧰 2. REQUIRED SOFTWARE
@@ -26,6 +27,7 @@ Version: Python 3.8 or above
 👉 https://git-scm.com/downloads
 Check installation:
 git --version
+
 =====================================================================
 
 🌐 3. GITHUB SETUP
@@ -36,6 +38,7 @@ git clone <https://github.com/harshitboots/ai-agent-hackathon.git>
 cd ai-agent-hackathon
 
 =====================================================================
+
 ☁️ 4. USING GITHUB CODESPACES (RECOMMENDED)
 👉 Best option to avoid setup issues
 🔹 Step 1 — Open Codespaces
@@ -48,6 +51,7 @@ Go to notebooks/
 Run step-by-step
 
 ==================================================================
+
 🔄 5. GIT COMMANDS (VERY IMPORTANT)
 👉 You don’t need to be an expert, just know these basics:
 🔹 Pull Latest Code
@@ -69,7 +73,8 @@ VS Code Terminal
 OR
 Codespaces Terminal
 
-======================================================================================
+=================================================================
+
 📦 6. REQUIRED LIBRARIES
 Already included:
 pandas
@@ -80,11 +85,13 @@ seaborn
 streamlit
 
 ======================================================================================
+
 🔑 7. OPTIONAL (AI FEATURE)
 If required:
 export OPENAI_API_KEY="your_key_here" (we are avoiding but its always required in real time)
 
 ======================================================================================
+
 📚 8. CONCEPTS YOU SHOULD KNOW
 🧠 Python Basics
 Variables

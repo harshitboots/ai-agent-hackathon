@@ -68,7 +68,7 @@ Before submitting:
 Pull latest changes:
 git pull origin main
 Add your work:
-git add .
+git add output/result.csv
 Commit:
 git commit -m "Final submission - YOUR NAME"
 Push:

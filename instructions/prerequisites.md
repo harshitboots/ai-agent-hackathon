@@ -4,7 +4,10 @@
 Set up your environment
 Understand basic concepts
 Be ready to build your AI agent smoothly**
+
 ===================================================================
+
+
 💻 1. SYSTEM REQUIREMENTS
 Make sure you have:
 ✅ Laptop (8GB RAM recommended)

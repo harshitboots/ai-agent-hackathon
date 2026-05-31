@@ -9,7 +9,7 @@ import pandas as pd
 
 st.set_page_config(page_title="AI Agent", layout="centered")
 
-st.title("harshit - AI AGENT")  
+st.title("Shadrack - AI AGENT")  
 st.write("Enter details below to get prediction")
 
 # ==========================================================
